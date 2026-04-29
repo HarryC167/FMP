@@ -28,18 +28,18 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetAxisRaw("Horizontal") > 0)
             {
-                anim.Play("walkRight");
+                anim.Play("WalkRight");
                 StartCoroutine(MoveRight(stepWait));
             }
             else
             {
-                anim.Play("walkLeft");
+                anim.Play("WalkLeft");
                 StartCoroutine(MoveLeft(stepWait));
             }
         }
         else
         {
-            anim.Play("idle");
+            anim.Play("PlayerAnim");
         }
         
         IEnumerator MoveRight(float seconds)
